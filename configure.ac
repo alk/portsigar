@@ -1,7 +1,10 @@
 AC_INIT([sigar_port], 1.0)
 AM_INIT_AUTOMAKE
+AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_FILES([Makefile])
-AM_PROG_CC_C_O
+AC_PROG_CC
+AC_PROG_LIBTOOL
+
 
 AC_SEARCH_LIBS([sigar_open], [sigar], [], [
   AC_MSG_NOTICE([will check for libsigar in ${prefix}/lib])
