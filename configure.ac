@@ -1,0 +1,32 @@
+AC_INIT([sigar_port], 1.0)
+AM_INIT_AUTOMAKE
+AC_CONFIG_FILES([Makefile])
+AM_PROG_CC_C_O
+
+AC_SEARCH_LIBS([sigar_open], [sigar], [], [
+  AC_MSG_NOTICE([will check for libsigar in ${prefix}/lib])
+  unset ac_cv_search_sigar_open
+  AC_SEARCH_LIBS([sigar_open], [sigar], [
+    SIGAR_LDFLAGS="-L${prefix}/lib"
+  ], [
+    AC_MSG_ERROR([need libsigar. Consider passing -L<path> in LDFLAGS])
+  ], [-L${prefix}/lib])
+])
+
+AC_CHECK_HEADER([sigar.h], [], [
+  AC_MSG_NOTICE([will check for sigar.h in ${prefix}/include])
+  unset ac_cv_header_sigar_h
+  ac_func_search_save_CPPFLAGS=$CPPFLAGS
+  CPPFLAGS="$CPPFLAGS -I${prefix}/include"
+  AC_CHECK_HEADER([sigar.h], [
+    SIGAR_CPPFLAGS="-I${prefix}/include"
+  ], [
+    AC_MSG_ERROR([need sigar.h. Consider passing -I<path> in CPPFLAGS])
+  ])
+  CPPFLAGS=$ac_func_search_save_CPPFLAGS
+])
+
+AC_SUBST(SIGAR_CPPFLAGS)
+AC_SUBST(SIGAR_LDFLAGS)
+
+AC_OUTPUT
