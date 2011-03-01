@@ -2,7 +2,7 @@
 -export([main/1]).
 
 unpack_data(Bin) ->
-    <<Version:32/native-signed,
+    <<Version:32/native,
       StructSize:32/native,
       CPULocalMS:64/native,
       CPUIdleMS:64/native,
@@ -15,7 +15,7 @@ unpack_data(Bin) ->
       MemActualUsed:64/native,
       MemActualFree:64/native>> = Bin,
     StructSize = erlang:size(Bin),
-    Version = -1,
+    Version = 0,
     [{cpu_local_ms, CPULocalMS},
      {cpu_idle_ms, CPUIdleMS},
      {swap_total, SwapTotal},

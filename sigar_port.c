@@ -39,7 +39,7 @@ int main(void)
 		if (req != 0)
 			break;
 		memset(&reply, 0, sizeof(reply));
-		reply.version = (uint32_t)-1;
+		reply.version = 0;
 		reply.struct_size = sizeof(reply);
 
 		sigar_mem_get(sigar, &mem);
