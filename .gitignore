@@ -1,6 +1,7 @@
 *.gcda
 *.o
 .deps
+/.libs
 /ChangeLog
 /GPATH
 /GRTAGS
@@ -27,3 +28,4 @@ depcomp
 install-sh
 missing
 sigar_port
+sigar_port.exe

@@ -6,11 +6,12 @@ AC_PROG_CC
 AC_PROG_LIBTOOL
 
 
-AC_SEARCH_LIBS([sigar_open], [sigar], [], [
+
+AC_CHECK_LIB([sigar], [main], [SIGAR_LDFLAGS=-lsigar], [
   AC_MSG_NOTICE([will check for libsigar in ${prefix}/lib])
-  unset ac_cv_search_sigar_open
-  AC_SEARCH_LIBS([sigar_open], [sigar], [
-    SIGAR_LDFLAGS="-L${prefix}/lib"
+  unset ac_cv_lib_sigar_main
+  AC_CHECK_LIB([sigar], [main], [
+    SIGAR_LDFLAGS="-L${prefix}/lib -lsigar"
   ], [
     AC_MSG_ERROR([need libsigar. Consider passing -L<path> in LDFLAGS])
   ], [-L${prefix}/lib])
