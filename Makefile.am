@@ -6,6 +6,8 @@ AM_LDFLAGS = $(SIGAR_LDFLAGS)
 bin_PROGRAMS = sigar_port
 sigar_port_SOURCES = sigar_port.c
 
+EXTRA_DIST=example.escript
+
 check-syntax:
 	$(COMPILE) -o /dev/null -S ${CHK_SOURCES}
 
