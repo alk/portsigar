@@ -1,7 +1,0 @@
-#!/bin/sh
-
-git log >ChangeLog
-
-mkdir m4
-
-autoreconf -i --force --verbose

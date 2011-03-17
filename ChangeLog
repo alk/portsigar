@@ -1,0 +1,53 @@
+commit 4cf4a3f9299a0c375fe439672deb32a64dd23e7e
+Author: Aliaksey Kandratsenka <alk@tut.by>
+Date:   Wed Mar 16 18:08:03 2011 -0700
+
+    ship example.escript
+
+commit 3d80adb7aa3201df24422c91fa475698521bf28b
+Author: Aliaksey Kandratsenka <alk@tut.by>
+Date:   Wed Mar 9 19:15:13 2011 -0800
+
+    made it find libsigar on windows
+
+commit 8d00f2097fe605be5068d7b98bfe526e1285467b
+Author: Aliaksey Kandratsenka <alk@tut.by>
+Date:   Wed Mar 9 16:06:12 2011 -0800
+
+    Membase is already Couchbase
+
+commit 0d77579a78baac504485b5f73ac4c735db5ab1a3
+Author: Aliaksey Kandratsenka <alk@tut.by>
+Date:   Mon Feb 28 17:21:48 2011 -0800
+
+    added copyright header and reformatted for membase C coding style
+
+commit 40e3dca356644bf774f7940a25e3e12e9ffe6f03
+Author: Aliaksey Kandratsenka <alk@tut.by>
+Date:   Mon Feb 28 17:14:19 2011 -0800
+
+    use version 0 of 'protocol'
+
+commit 0b76757b36e606cda91e96d2e817b35ea295253c
+Author: Aliaksey Kandratsenka <alk@tut.by>
+Date:   Mon Feb 28 17:12:30 2011 -0800
+
+    added license and README
+
+commit f9ceb5d1b9a3cc8309801e4f503603069bbf37a6
+Author: Aliaksey Kandratsenka <alk@tut.by>
+Date:   Fri Feb 25 19:00:19 2011 -0800
+
+    made it actually work
+
+commit 996501a461a037887da996e69f9737f608ae4e38
+Author: Aliaksey Kandratsenka <alk@tut.by>
+Date:   Fri Feb 25 19:10:25 2011 -0800
+
+    use libtool to link with rpath
+
+commit 7a611f3d6f6900126c5404d0514df948c72037b2
+Author: Aliaksey Kandratsenka <alk@tut.by>
+Date:   Fri Feb 25 17:49:48 2011 -0800
+
+    created initial autotools project
